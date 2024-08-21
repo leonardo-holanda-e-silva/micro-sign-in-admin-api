@@ -3,8 +3,7 @@ from sqlalchemy.exc import NoResultFound
 from typing import List, Type
 import uuid
 
-from models.user import User
-
+from model.user import User
 
 class UserRepository:
     def __init__(self, session: Session):

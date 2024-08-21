@@ -3,7 +3,7 @@ from sqlalchemy.exc import NoResultFound
 from typing import List, Any, Type
 import uuid
 
-from models.group import Group
+from model.group import Group
 
 
 class GroupRepository:

@@ -3,7 +3,7 @@ from sqlalchemy.exc import NoResultFound
 from typing import List, Type
 import uuid
 
-from models.system import System
+from model.system import System
 
 
 class SystemRepository:

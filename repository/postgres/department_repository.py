@@ -4,7 +4,7 @@ from typing import List, Any, Type, Optional
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 
-from models.department import Department
+from model.department import Department
 
 
 class DepartmentRepository:
