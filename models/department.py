@@ -1,15 +1,34 @@
 import uuid
-
-from company import Company
+from sqlalchemy import Column, String, DateTime, ForeignKey, Table
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.orm import relationship
+from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
-from function import Function
-from typing import List
-from user import User
 
-class Department:
-    id:uuid
-    name:str
-    entry_date:datetime
-    company:Company
-    admins:List[User]
-    functions:List[Function]
+Base = declarative_base()
+
+department_admins = Table(
+    'department_admins', Base.metadata,
+    Column('department_id', UUID(as_uuid=True), ForeignKey('department.id'), primary_key=True),
+    Column('user_id', UUID(as_uuid=True), ForeignKey('user.id'), primary_key=True)
+)
+
+department_functions = Table(
+    'department_functions', Base.metadata,
+    Column('department_id', UUID(as_uuid=True), ForeignKey('department.id'), primary_key=True),
+    Column('function_id', UUID(as_uuid=True), ForeignKey('function.id'), primary_key=True)
+)
+
+
+class Department(Base):
+    __tablename__ = 'department'
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name = Column(String, nullable=False)
+    entry_date = Column(DateTime, default=datetime.utcnow)
+
+    company_id = Column(UUID(as_uuid=True), ForeignKey('company.id'))
+    company = relationship('Company', back_populates='departments')
+
+    admins = relationship('User', secondary=department_admins, back_populates='departments')
+    functions = relationship('Function', secondary=department_functions, back_populates='departments')

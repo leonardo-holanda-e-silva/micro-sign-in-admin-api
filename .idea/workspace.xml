@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/about.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/db/ddl.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/company.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/company.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/permission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/company_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/company_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/department_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/department_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/function_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/function_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/group_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/group_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/permission_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/permission_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/system_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/system_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repository/postgres/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/user_repository.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2kwcQGrYIraiQDzHSAv46tNNF2E" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/Leonardo/OneDrive/Documentos/lhes-tech/micro-sign-in-admin-api"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-ce3d9afa04ac-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.20224.347" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="" />
+      <created>1724198062645</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1724198062645</updated>
+    </task>
+    <servers />
+  </component>
+</project>

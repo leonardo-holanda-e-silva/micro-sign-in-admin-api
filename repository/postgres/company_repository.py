@@ -1,18 +1,39 @@
-from repository.postgres.department_repository import DepartmentRepository
-from typing import List, Optional
-from repository.postgres.user_repository import UserRepository
+import uuid
+from typing import List, Any, Type
 
-from sqlalchemy import ForeignKey, String, UUID, TIMESTAMP
-from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
+from sqlalchemy.orm import Session
+from sqlalchemy.exc import NoResultFound
 
-class Base(DeclarativeBase):
-    pass
+from models.company import Company
 
-class CompanyRepository(Base):
-    __tablename__ = "Company"
+class CompanyRepository:
+    def __init__(self, session: Session):
+        self.session = session
 
-    id:Mapped[UUID] = mapped_column(primary_key=True)
-    name:Mapped[str] = mapped_column(String(100))
-    entry_date:Mapped[TIMESTAMP]
-    admins:Mapped[List[UserRepository]]
-    departments:Mapped[List[DepartmentRepository]]
+    def add(self, company: Company) -> None:
+        self.session.add(company)
+        self.session.commit()
+
+    def get_by_id(self, company_id: uuid.UUID) -> Type[Company] | None:
+        try:
+            return self.session.query(Company).filter(Company.id == company_id).one()
+        except NoResultFound:
+            return None
+
+    def get_all(self) -> List[Type[Company]]:
+        return self.session.query(Company).all()
+
+    def update(self, company: Company) -> None:
+        existing_company = self.get_by_id(company.id)
+        if existing_company:
+            existing_company.name = company.name
+            existing_company.entry_date = company.entry_date
+            existing_company.admins = company.admins
+            existing_company.departments = company.departments
+            self.session.commit()
+
+    def delete(self, company_id: uuid.UUID) -> None:
+        company = self.get_by_id(company_id)
+        if company:
+            self.session.delete(company)
+            self.session.commit()

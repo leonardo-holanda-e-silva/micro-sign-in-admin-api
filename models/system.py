@@ -1,9 +1,15 @@
 import uuid
-
+from sqlalchemy import Column, String, DateTime
+from sqlalchemy.dialects.postgresql import UUID
+from sqlalchemy.ext.declarative import declarative_base
 from datetime import datetime
 
-class System:
-    id:uuid
-    name:str
-    entry_data:datetime
-    url:str
+Base = declarative_base()
+
+class System(Base):
+    __tablename__ = 'system'
+
+    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    name = Column(String, nullable=False)
+    entry_date = Column(DateTime, default=datetime.utcnow)
+    url = Column(String, nullable=False)
