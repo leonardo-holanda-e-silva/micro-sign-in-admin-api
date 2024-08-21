@@ -163,3 +163,4 @@ cython_debug/
 .idea/misc.xml
 .idea/micro-sign-in-admin-api.iml
 .idea/inspectionProfiles/profiles_settings.xml
+.idea/workspace.xml
