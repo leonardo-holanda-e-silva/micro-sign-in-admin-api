@@ -1,4 +1,8 @@
 FROM ubuntu:latest
-LABEL authors="Leonardo"
+LABEL authors="leonardo@lhes.tech"
+
+WORKDIR /app
+
+COPY . .
 
 ENTRYPOINT ["top", "-b"]

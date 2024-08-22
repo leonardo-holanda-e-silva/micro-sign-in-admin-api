@@ -2,7 +2,7 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from model.company import Company
-from repository.postgres.company_repository import CompanyRepository
+from repositories.postgres.company_repository import CompanyRepository
 
 class CompanyService:
     def __init__(self, repository: CompanyRepository):

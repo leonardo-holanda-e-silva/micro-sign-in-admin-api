@@ -1,12 +1,10 @@
 import uuid
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
+from config.configs import settings
 from datetime import datetime
 
-Base = declarative_base()
-
-class Permission(Base):
+class Permission(settings.DBBaseModel):
     __tablename__ = 'permission'
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

@@ -2,7 +2,7 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from model.system import System
-from repository.postgres.system_repository import SystemRepository
+from repositories.postgres.system_repository import SystemRepository
 
 class SystemService:
     def __init__(self, repository: SystemRepository):

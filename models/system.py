@@ -1,12 +1,10 @@
 import uuid
 from sqlalchemy import Column, String, DateTime
 from sqlalchemy.dialects.postgresql import UUID
-from sqlalchemy.ext.declarative import declarative_base
+from config.configs import settings
 from datetime import datetime
 
-Base = declarative_base()
-
-class System(Base):
+class System(settings.DBBaseModel):
     __tablename__ = 'system'
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

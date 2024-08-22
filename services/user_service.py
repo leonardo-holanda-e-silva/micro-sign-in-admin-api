@@ -2,7 +2,7 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from model.user import User
-from repository.postgres.user_repository import UserRepository
+from repositories.postgres.user_repository import UserRepository
 
 class UserService:
     def __init__(self, repository: UserRepository):

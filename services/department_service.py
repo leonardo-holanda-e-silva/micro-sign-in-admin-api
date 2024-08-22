@@ -2,7 +2,7 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from model.department import Department
-from repository.postgres.department_repository import DepartmentRepository
+from repositories.postgres.department_repository import DepartmentRepository
 
 class DepartmentService:
     def __init__(self, repository: DepartmentRepository):

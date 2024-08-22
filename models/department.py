@@ -2,25 +2,23 @@ import uuid
 from sqlalchemy import Column, String, DateTime, ForeignKey, Table
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
+from config.configs import settings
 from datetime import datetime
 
-Base = declarative_base()
-
 department_admins = Table(
-    'department_admins', Base.metadata,
+    'department_admins', settings.DBBaseModel.metadata,
     Column('department_id', UUID(as_uuid=True), ForeignKey('department.id'), primary_key=True),
     Column('user_id', UUID(as_uuid=True), ForeignKey('user.id'), primary_key=True)
 )
 
 department_functions = Table(
-    'department_functions', Base.metadata,
+    'department_functions', settings.DBBaseModel.metadata,
     Column('department_id', UUID(as_uuid=True), ForeignKey('department.id'), primary_key=True),
     Column('function_id', UUID(as_uuid=True), ForeignKey('function.id'), primary_key=True)
 )
 
 
-class Department(Base):
+class Department(settings.DBBaseModel):
     __tablename__ = 'department'
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)

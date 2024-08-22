@@ -2,31 +2,29 @@ import uuid
 from sqlalchemy import Column, String, DateTime, Table, ForeignKey
 from sqlalchemy.dialects.postgresql import UUID
 from sqlalchemy.orm import relationship
-from sqlalchemy.ext.declarative import declarative_base
+from config.configs import settings
 from datetime import datetime
 
-Base = declarative_base()
-
 group_permissions = Table(
-    'group_permissions', Base.metadata,
+    'group_permissions', settings.DBBaseModel.metadata,
     Column('group_id', UUID(as_uuid=True), ForeignKey('group.id'), primary_key=True),
     Column('permission_id', UUID(as_uuid=True), ForeignKey('permission.id'), primary_key=True)
 )
 
 group_users = Table(
-    'group_users', Base.metadata,
+    'group_users', settings.DBBaseModel.metadata,
     Column('group_id', UUID(as_uuid=True), ForeignKey('group.id'), primary_key=True),
     Column('user_id', UUID(as_uuid=True), ForeignKey('user.id'), primary_key=True)
 )
 
 group_systems = Table(
-    'group_systems', Base.metadata,
+    'group_systems', settings.DBBaseModel.metadata,
     Column('group_id', UUID(as_uuid=True), ForeignKey('group.id'), primary_key=True),
     Column('system_id', UUID(as_uuid=True), ForeignKey('system.id'), primary_key=True)
 )
 
 
-class Group(Base):
+class Group(settings.DBBaseModel):
     __tablename__ = 'group'
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
