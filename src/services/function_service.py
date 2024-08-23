@@ -1,8 +1,8 @@
 from typing import List, Type
 import uuid
 from datetime import datetime
-from model.function import Function
-from repositories.postgres.function_repository import FunctionRepository
+from src.models.function import Function
+from src.repositories.postgres.function_repository import FunctionRepository
 
 class FunctionService:
     def __init__(self, repository: FunctionRepository):

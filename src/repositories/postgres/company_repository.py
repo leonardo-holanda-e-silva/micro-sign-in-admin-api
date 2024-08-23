@@ -4,7 +4,7 @@ from typing import List, Any, Type
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 
-from model.company import Company
+from src.models.company import Company
 
 class CompanyRepository:
     def __init__(self, session: Session):

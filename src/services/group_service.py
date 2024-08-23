@@ -1,8 +1,8 @@
 from typing import List, Type
 import uuid
 from datetime import datetime
-from model.group import Group
-from repositories.postgres.group_repository import GroupRepository
+from src.models.group import Group
+from src.repositories.postgres.group_repository import GroupRepository
 
 class GroupService:
     def __init__(self, repository: GroupRepository):

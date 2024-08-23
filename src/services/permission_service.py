@@ -1,8 +1,8 @@
 from typing import List, Type
 import uuid
 from datetime import datetime
-from model.permission import Permission
-from repositories.postgres.permission_repository import PermissionRepository
+from src.models.permission import Permission
+from src.repositories.postgres.permission_repository import PermissionRepository
 
 class PermissionService:
     def __init__(self, repository: PermissionRepository):

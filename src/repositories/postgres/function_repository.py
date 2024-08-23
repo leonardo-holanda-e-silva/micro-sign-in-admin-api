@@ -3,7 +3,7 @@ from sqlalchemy.exc import NoResultFound
 from typing import List, Type, Any
 import uuid
 
-from model.function import Function
+from src.models.function import Function
 
 
 class FunctionRepository:

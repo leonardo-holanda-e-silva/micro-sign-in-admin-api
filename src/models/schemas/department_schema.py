@@ -3,8 +3,8 @@ from pydantic import BaseModel, Field
 from uuid import UUID
 from datetime import datetime
 from typing import List, Optional
-from models.schemas.function_schema import FunctionSchema
-from models.schemas.user_schema import UserSchema
+from src.models.schemas.function_schema import FunctionSchema
+from src.models.schemas.user_schema import UserSchema
 
 
 class DepartmentSchema(BaseModel):

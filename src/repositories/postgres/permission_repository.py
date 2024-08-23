@@ -1,4 +1,4 @@
-from model.permission import Permission
+from src.models.permission import Permission
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 from typing import List, Type

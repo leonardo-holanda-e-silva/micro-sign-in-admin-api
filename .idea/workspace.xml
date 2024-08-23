@@ -5,28 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/service/company_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/department_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/function_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/group_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/permission_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/system_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/user_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/company.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/company.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/department.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/function.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/group.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/permission.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/model/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/company_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/company_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/department_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/department_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/function_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/function_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/group_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/group_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/permission_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/permission_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/system_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/system_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/repository/postgres/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/repository/postgres/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/company_endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/company_endpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/__all_models__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/__all_models__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/company.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/company.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/department.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/department.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/function.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/function.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/group.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/group.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/permission.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/permission.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/company_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/company_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/department_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/department_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/function_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/function_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/group_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/group_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/permission_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/permission_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/system_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/system_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/schemas/user_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/user_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/system.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/company_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/company_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/department_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/department_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/function_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/function_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/group_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/group_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/permission_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/permission_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/system_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/system_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/repositories/postgres/user_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/postgres/user_repository.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/company_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/company_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/department_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/department_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/function_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/function_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/group_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/group_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/permission_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/permission_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/system_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/system_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/user_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,9 +55,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2kwcQGrYIraiQDzHSAv46tNNF2E" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -55,17 +66,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Leonardo/OneDrive/Documentos/lhes-tech/micro-sign-in-admin-api"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Leonardo/OneDrive/Documentos/lhes-tech/micro-sign-in-admin-api&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Leonardo\OneDrive\Documentos\lhes-tech\micro-sign-in-admin-api\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
-      <deployment type="docker-compose.yml" />
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
   </component>
