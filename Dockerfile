@@ -1,8 +1,13 @@
-FROM ubuntu:latest
-LABEL authors="leonardo@lhes.tech"
+FROM python:3.12.4
 
 WORKDIR /app
 
+RUN python -m ensurepip --upgrade
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
 COPY . .
 
-ENTRYPOINT ["top", "-b"]
+CMD ["python", "main.py"]

@@ -5,13 +5,14 @@ services:
     image: postgres:16.4
     container_name: postgres-db
     environment:
-      POSTGRES_USER: your_user
-      POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: your_database
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: msia
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      - ./db/pg:/docker-entrypoint-initdb.d
 
   redis:
     image: redis:7.4
@@ -22,14 +23,12 @@ services:
       - redis_data:/data
 
   application:
-    image: python:3.12.4
+    build: .
     container_name: application
     env_file:
       - .env
-    volumes:
-      - .:/app
-    working_dir: /app
-    command: ["python", "main.py"]
+    ports:
+      - "8000:8000"
     depends_on:
       - postgres
       - redis
