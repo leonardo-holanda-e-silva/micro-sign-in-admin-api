@@ -2,11 +2,11 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from src.models.group import Group
-from src.repositories.postgres.group_repository import GroupRepository
+from src.repositories.postgres.group_repository import GroupRepository as Respository
 
 class GroupService:
-    def __init__(self, repository: GroupRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Respository()
 
     def create_group(self, group: Group) -> Group:
         if group.entry_date is None:

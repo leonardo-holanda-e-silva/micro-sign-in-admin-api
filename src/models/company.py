@@ -23,7 +23,7 @@ class Company(settings.DBBaseModel):
 
     id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name = Column(String, nullable=False)
-    entry_date = Column(DateTime, default=datetime.utcnow)
+    entry_date = Column(DateTime, default=datetime.now())
 
     admins = relationship('User', secondary=company_admins, back_populates='companies')
     departments = relationship('Department', secondary=company_departments, back_populates='companies')

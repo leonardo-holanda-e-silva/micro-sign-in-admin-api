@@ -2,11 +2,11 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from src.models.function import Function
-from src.repositories.postgres.function_repository import FunctionRepository
+from src.repositories.postgres.function_repository import FunctionRepository as Respository
 
 class FunctionService:
-    def __init__(self, repository: FunctionRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Respository()
 
     def create_function(self, function: Function) -> Function:
         if function.entry_date is None:

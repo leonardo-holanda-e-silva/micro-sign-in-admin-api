@@ -2,11 +2,11 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from src.models.system import System
-from src.repositories.postgres.system_repository import SystemRepository
+from src.repositories.postgres.system_repository import SystemRepository as Repository
 
 class SystemService:
-    def __init__(self, repository: SystemRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Repository()
 
     def create_system(self, system: System) -> System:
         if system.entry_date is None:

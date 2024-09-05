@@ -2,11 +2,11 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from src.models.user import User
-from src.repositories.postgres.user_repository import UserRepository
+from src.repositories.postgres.user_repository import UserRepository as Repository
 
 class UserService:
-    def __init__(self, repository: UserRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Repository()
 
     def create_user(self, user: User) -> User:
         if user.entry_date is None:

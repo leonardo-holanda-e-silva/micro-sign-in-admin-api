@@ -1,3 +1,7 @@
+from fastapi import Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+
+from config.deps import get_pg_session
 from src.models.permission import Permission
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
@@ -5,8 +9,8 @@ from typing import List, Type
 import uuid
 
 class PermissionRepository:
-    def __init__(self, session: Session):
-        self.session = session
+    def __init__(self):
+        self.session: AsyncSession = Depends(get_pg_session)
 
     def add(self, permission: Permission) -> None:
         self.session.add(permission)

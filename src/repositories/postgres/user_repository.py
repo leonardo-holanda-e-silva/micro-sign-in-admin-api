@@ -1,13 +1,16 @@
+from fastapi import Depends
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 from typing import List, Type
 import uuid
 
+from config.deps import get_pg_session
 from src.models.user import User
 
 class UserRepository:
-    def __init__(self, session: Session):
-        self.session = session
+    def __init__(self):
+        self.session: AsyncSession = Depends(get_pg_session)
 
     def add(self, user: User) -> None:
         self.session.add(user)

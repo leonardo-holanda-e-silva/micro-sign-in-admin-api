@@ -1,12 +1,17 @@
 from typing import List
 import uuid
 from datetime import datetime
+
+from fastapi import Depends
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from src.models.company import Company
-from src.repositories.postgres.company_repository import CompanyRepository
+from src.models.department import Department
+from src.repositories.postgres.company_repository import CompanyRepository as Respository
 
 class CompanyService:
-    def __init__(self, repository: CompanyRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Respository()
 
     def create_company(self, company: Company) -> Company:
         if company.entry_date is None:

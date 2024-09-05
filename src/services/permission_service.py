@@ -2,11 +2,11 @@ from typing import List, Type
 import uuid
 from datetime import datetime
 from src.models.permission import Permission
-from src.repositories.postgres.permission_repository import PermissionRepository
+from src.repositories.postgres.permission_repository import PermissionRepository as Repository
 
 class PermissionService:
-    def __init__(self, repository: PermissionRepository):
-        self.repository = repository
+    def __init__(self):
+        self.repository = Repository()
 
     def create_permission(self, permission: Permission) -> Permission:
         if permission.entry_date is None:

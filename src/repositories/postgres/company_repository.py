@@ -1,14 +1,17 @@
 import uuid
 from typing import List, Any, Type
 
+from fastapi import Depends
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 
+from config.deps import get_pg_session
 from src.models.company import Company
 
 class CompanyRepository:
-    def __init__(self, session: Session):
-        self.session = session
+    def __init__(self):
+        self.session : AsyncSession = Depends(get_pg_session)
 
     def add(self, company: Company) -> None:
         self.session.add(company)

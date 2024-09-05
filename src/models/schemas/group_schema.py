@@ -9,7 +9,7 @@ from src.models.schemas.system_schema import SystemSchema
 from src.models.schemas.user_schema import UserSchema
 
 
-class GroupBase(BaseModel):
+class GroupSchema(BaseModel):
     id: UUID = Field(default_factory=uuid.uuid4)
     name: str
     entry_date: datetime = Field(default_factory=datetime.utcnow)

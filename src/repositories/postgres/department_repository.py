@@ -1,15 +1,18 @@
 import uuid
 from typing import List, Any, Type, Optional
 
+from fastapi import Depends
+from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import Session
 from sqlalchemy.exc import NoResultFound
 
+from config.deps import get_pg_session
 from src.models.department import Department
 
 
 class DepartmentRepository:
-    def __init__(self, session: Session):
-        self.session = session
+    def __init__(self):
+        self.session: AsyncSession = Depends(get_pg_session)
 
     def add(self, department: Department) -> None:
         self.session.add(department)
@@ -24,7 +27,7 @@ class DepartmentRepository:
     def get_all(self) -> List[Type[Department]]:
         return self.session.query(Department).all()
 
-    def update(self, department: Department) -> None:
+    def update(self, department: Type[Department]) -> Type[Department]:
         existing_department = self.get_by_id(department.id)
         if existing_department:
             existing_department.name = department.name
@@ -33,6 +36,7 @@ class DepartmentRepository:
             existing_department.admins = department.admins
             existing_department.functions = department.functions
             self.session.commit()
+            return existing_department
 
     def delete(self, department_id: uuid.UUID) -> None:
         department = self.get_by_id(department_id)
