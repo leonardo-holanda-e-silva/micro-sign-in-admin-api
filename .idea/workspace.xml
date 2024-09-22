@@ -4,38 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="Endpoints sketch">
-      <change afterPath="$PROJECT_DIR$/src/controllers/registry_controller.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/general_response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/schemas/company_registry_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/schemas/registry_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/schemas/user_registry_schema.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/rabbit_mq/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/rabbit_mq/rabbit_mq_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/registry_service.py" afterDir="false" />
+    <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="Tr">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/deps.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/deps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/company_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/department_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/function_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/group_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/permission_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/system_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/user_endpoint.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/company_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/department_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/function_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/group_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/permission_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/system_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/schemas/user_schema.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/company_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/company_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/redis/redis_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/redis/redis_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/registry_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/registry_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/company.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/department.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/function.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/general_response.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/group.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/permission.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/company_registry_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/company_registry_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/user_registry_schema.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/schemas/user_registry_schema.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/system.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/company_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/department_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/function_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/group_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/permission_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/system_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/postgres/user_repository.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/registry_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/registry_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

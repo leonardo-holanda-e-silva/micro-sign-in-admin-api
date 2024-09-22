@@ -18,9 +18,9 @@ async def init_registry(schema: RegistrySchema) -> GeneralResponse:
     return service.init_registration(schema)
 
 @router.post("/registry/user/{key}", status_code=HTTP_201_CREATED)
-async def user_registry(schema: UserRegistrySchema) -> GeneralResponse:
-    return service.user_registration(schema)
+async def user_registry(key:str, schema: UserRegistrySchema) -> GeneralResponse:
+    return service.user_registration(schema, key)
 
 @router.post("/registry/company/{key}", status_code=HTTP_201_CREATED)
-async def company_registry(schema: CompanyRegistrySchema) -> GeneralResponse:
-    return service.company_registration(schema)
+async def company_registry(key:str, schema: CompanyRegistrySchema) -> GeneralResponse:
+    return service.company_registration(schema, key)

@@ -57,8 +57,8 @@ class RegistryService:
             info=str(key)
         )
 
-    def user_registration(self, schema: UserRegistrySchema) -> GeneralResponse:
+    def user_registration(self, schema: UserRegistrySchema, key:str) -> GeneralResponse:
         pass
 
-    def company_registration(self, schema: CompanyRegistrySchema) -> GeneralResponse:
+    def company_registration(self, schema: CompanyRegistrySchema, key:str) -> GeneralResponse:
         pass

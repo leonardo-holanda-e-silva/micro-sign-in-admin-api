@@ -1,7 +1,11 @@
-from pydantic import BaseModel, Field, constr, EmailStr
+from pydantic import BaseModel, Field, constr, EmailStr, AnyUrl
 from uuid import UUID
-from datetime import datetime
 import uuid
 
 class CompanyRegistrySchema(BaseModel):
-    pass
+    key: UUID = Field(default_factory=uuid.uuid4)
+    name: constr(max_length=100) = Field(...)
+    logo: bytearray = Field(...)
+    website: AnyUrl = Field(...)
+    size: int = Field(gt=0)
+    active: bool = Field(default=True)
