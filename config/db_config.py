@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from config.configs import settings
 
+REDIS_URL = "localhost:6379"
 
 pg_engine: AsyncEngine = create_async_engine(settings.DB_POSTGRES_URL)
 

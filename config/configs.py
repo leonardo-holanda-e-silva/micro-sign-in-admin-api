@@ -16,6 +16,11 @@ class Settings(BaseSettings):
     DB_POSTGRES_BASE: str = os.environ.get("DB_POSTGRES_BASE")
     DB_POSTGRES_URL: str = f"postgresql+asyncpg://{DB_POSTGRES_USER}:{DB_POSTGRES_PASS}@{DB_POSTGRES_IP}:{DB_POSTGRES_PORT}/{DB_POSTGRES_BASE}"
     DBBaseModel = declarative_base()
+    REDIS_URL: str = "localhost:6379"
+    REDIS_REGISTRY_COLLECTION: str = "registry"
+    RABBIT_MQ_URL: str = "localhost:5672"
+    RABBIT_MQ_REGISTRY_QUEUE: str = "registry"
+    RABBIT_MQ_REGISTRY_DLQ: str = "registry_dlq"
 
     class Config:
         case_sensitive = True

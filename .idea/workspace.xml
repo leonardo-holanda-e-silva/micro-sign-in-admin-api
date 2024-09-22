@@ -4,19 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/config/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/controllers/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/models/schemas/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/repositories/postgres/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/redis/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/services/redis/redis_service.py" afterDir="false" />
+    <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="Endpoints sketch">
+      <change afterPath="$PROJECT_DIR$/src/controllers/registry_controller.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/general_response.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/schemas/company_registry_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/schemas/registry_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/models/schemas/user_registry_schema.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/rabbit_mq/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/rabbit_mq/rabbit_mq_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/services/registry_service.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/company_endpoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/company_endpoint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/db_config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/db_config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/deps.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/deps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/company_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/department_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/function_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/group_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/permission_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/system_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/controllers/user_endpoint.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/company_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/department_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/function_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/group_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/permission_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/system_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/schemas/user_schema.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/models/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/user.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/company_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/company_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/redis/redis_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/redis/redis_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,14 +64,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Leonardo/OneDrive/Documentos/lhes-tech/micro-sign-in-admin-api/src/services/redis"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Leonardo/OneDrive/Documentos/lhes-tech/micro-sign-in-admin-api&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Leonardo\OneDrive\Documentos\lhes-tech\micro-sign-in-admin-api\src\services\redis" />
@@ -89,6 +108,19 @@
       <option name="presentableId" value="Default" />
       <updated>1724198062645</updated>
     </task>
+    <task id="LOCAL-00001" summary="Endpoints sketch">
+      <option name="closed" value="true" />
+      <created>1725498195360</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1725498195360</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Endpoints sketch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Endpoints sketch" />
   </component>
 </project>

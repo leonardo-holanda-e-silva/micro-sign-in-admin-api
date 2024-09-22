@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Type
 import uuid
 from datetime import datetime
 
@@ -7,22 +7,22 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from src.models.company import Company
 from src.models.department import Department
-from src.repositories.postgres.company_repository import CompanyRepository as Respository
+from src.repositories.postgres.company_repository import CompanyRepository as Repository
 
 class CompanyService:
     def __init__(self):
-        self.repository = Respository()
+        self.repository = Repository()
 
     def create_company(self, company: Company) -> Company:
         if company.entry_date is None:
-            company.entry_date = datetime.utcnow()
+            company.entry_date = datetime.now()
         self.repository.add(company)
         return company
 
-    def get_company(self, company_id: uuid.UUID) -> Company:
+    def get_company(self, company_id: uuid.UUID) -> Type[Company] | None:
         return self.repository.get_by_id(company_id)
 
-    def get_all_companies(self) -> List[Company]:
+    def get_all_companies(self) -> list[Type[Company]]:
         return self.repository.get_all()
 
     def update_company(self, company: Company) -> None:

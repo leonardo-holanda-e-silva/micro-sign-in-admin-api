@@ -37,7 +37,7 @@ class User(settings.DBBaseModel):
     mails = Column(JSONB, nullable=False)
     addresses = Column(JSONB, nullable=False)
     birth = Column(Date, nullable=False)
-    entry_date = Column(DateTime, default=datetime.utcnow)
+    entry_date = Column(DateTime, default=datetime.now())
     phones = Column(JSONB, nullable=False)
 
     companies = relationship('Company', secondary=user_companies, back_populates='users')
