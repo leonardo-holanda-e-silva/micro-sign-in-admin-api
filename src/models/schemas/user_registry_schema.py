@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field, EmailStr, constr, validator, field_validator
+from pydantic import BaseModel, Field, EmailStr, constr, field_validator
 from uuid import UUID
 import uuid
 import re
@@ -11,11 +11,12 @@ class UserRegistrySchema(BaseModel):
     password: str = Field(...)
     email: EmailStr = Field(...)
     phone: constr(max_length=15) = Field(...)
-    photo: bytearray = Field(...)
+    photo: str = Field(...)
     active: bool = Field(default=True)
 
     @field_validator('password')
-    def validate_password(self, value):
+    @staticmethod  # Torna o método estático
+    def validate_password(value):
         if not re.search(r'[a-z]', value):
             raise ValueError('Password must contain at least one lowercase letter.')
         if not re.search(r'[A-Z]', value):
