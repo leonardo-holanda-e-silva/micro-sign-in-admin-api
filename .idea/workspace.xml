@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="25b291e4-1301-4022-a7c8-5bc75c32b429" name="Changes" comment="Tr">
-      <change afterPath="$PROJECT_DIR$/src/models/general_response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/configs.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/configs.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/db_config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/deps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/mongo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controllers/registry_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/controllers/registry_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/redis/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/mongo/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/redis/redis_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/mongo/mongo_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/registry_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/registry_service.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
