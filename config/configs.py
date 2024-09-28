@@ -15,12 +15,15 @@ class Settings(BaseSettings):
     DB_POSTGRES_PORT: str = os.environ.get("DB_POSTGRES_PORT")
     DB_POSTGRES_BASE: str = os.environ.get("DB_POSTGRES_BASE")
     DB_POSTGRES_URL: str = f"postgresql+asyncpg://{DB_POSTGRES_USER}:{DB_POSTGRES_PASS}@{DB_POSTGRES_IP}:{DB_POSTGRES_PORT}/{DB_POSTGRES_BASE}"
-    DBBaseModel = declarative_base()
-    REDIS_URL: str = "localhost:6379"
-    REDIS_REGISTRY_COLLECTION: str = "registry"
-    RABBIT_MQ_URL: str = "localhost:5672"
-    RABBIT_MQ_REGISTRY_QUEUE: str = "registry"
-    RABBIT_MQ_REGISTRY_DLQ: str = "registry_dlq"
+    RABBIT_MQ_URL: str = os.environ.get("RABBIT_MQ_URL")
+    RABBIT_MQ_REGISTRY_QUEUE: str = os.environ.get("RABBIT_MQ_REGISTRY_QUEUE")
+    RABBIT_MQ_REGISTRY_DLQ: str = os.environ.get("RABBIT_MQ_REGISTRY_DLQ")
+    MONGO_DB_USER: str = os.environ.get("MONGO_DB_USER")
+    MONGO_DB_PASS: str = os.environ.get("MONGO_DB_PASS")
+    MONGO_DB_IP: str = os.environ.get("MONGO_DB_IP")
+    MONGO_DB_PORT: str = os.environ.get("MONGO_DB_PORT")
+    MONGO_DB_REGISTRY_COLLECTION: str = os.environ.get("MONGO_DB_REGISTRY_COLLECTION")
+    MONGO_DB_URL: str = f"mongodb://{MONGO_DB_USER}:{MONGO_DB_PASS}@{MONGO_DB_IP}:{MONGO_DB_PORT}/{MONGO_DB_REGISTRY_COLLECTION}"
 
     class Config:
         case_sensitive = True
